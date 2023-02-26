@@ -100,3 +100,19 @@ body {
   color: #6b7082;
   letter-spacing: 1.5px;
 }
+
+/* media queries */
+@media screen and (max-width: 350px) {
+  .container {
+    height: 360px;
+    width: 326px
+  }
+  .card__backgroundImage {
+    width: 326px;
+    justify-content: center;
+    margin-right: 2rem;
+  }
+  .card__bottomStack {
+    margin-right: 2rem;
+  }
+}
