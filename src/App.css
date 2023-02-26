@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #19A1AE;
+  background-image: url("./assets/images/bg-pattern-bottom.svg")
+}
+.App {
+  background-image: url("./assets/images/bg-pattern-top.svg");
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +19,84 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 348px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card__top {
+  height: 140px; 
+  width: 350px;
+  margin-bottom: -5rem;
+}
+.card__backgroundImage {
+  width: 350px;
+  height: 120px;
+  border-radius: 10px 10px 0 0;
+}
+.card__image {
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.card__imageTitle {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Kumbh Sans;
+}
+.card__imageSpan {
+  font-size: 18px;
+  font-weight: 300;
+  color: #6b7082;
+  font-family: Kumbh Sans;
+  margin-left: 0.5rem;
+}
+.card__imageLocation {
+  font-size: 14px;
+  font-weight: 300;
+  color: #6b7082;
+  font-family: Kumbh Sans;
+}
+.middle {
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.card__bottom {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 }
-
-.card {
-  padding: 2em;
+.card__bottomStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.read-the-docs {
-  color: #888;
+.card__divider {
+  border: 0.1px solid #E8E9EC;
+  width: 100%;
+  margin: 0.5rem auto;
+}
+.card__bottomStackTitle {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: Kumbh Sans;
+  margin-bottom: 0;
+}
+.card__bottomStackPara {
+  font-size: 10px;
+  color: #6b7082;
+  letter-spacing: 1.5px;
 }

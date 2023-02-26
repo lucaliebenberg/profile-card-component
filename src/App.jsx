@@ -1,34 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+// imports
+import Image from "../src/assets/images/image-victor.jpg";
+import TopBackground from "../src/assets/images/bg-pattern-top.svg";
+import BottomBackground from "../src/assets/images/bg-pattern-bottom.svg";
+import CardBackground from "../src/assets/images/bg-pattern-card.svg";
 
+const App = () => {
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <div className="card__top">
+          <img
+            className="card__backgroundImage"
+            src={CardBackground}
+            alt="card background"
+          />
+        </div>
+        <div className="middle">
+          <img className="card__image" src={Image} alt="Image" />
+          <p className="card__imageTitle">
+            Victor Crest <span className="card__imageSpan">26</span>
+          </p>
+          <p className="card__imageLocation">London</p>
+        </div>
+        <div className="card__divider"></div>
+        <div className="card__bottom">
+          <div className="card__bottomStack">
+            <p className="card__bottomStackTitle">80K</p>
+            <p className="card__bottomStackPara">Followers</p>
+          </div>
+          <div className="card__bottomStack">
+            <p className="card__bottomStackTitle">803K</p>
+            <p className="card__bottomStackPara">Likes</p>
+          </div>
+          <div className="card__bottomStack">
+            <p className="card__bottomStackTitle">1.4K</p>
+            <p className="card__bottomStackPara">Photos</p>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
